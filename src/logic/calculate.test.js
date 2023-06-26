@@ -1,7 +1,6 @@
 import calculate from "./calculate";
 import chai from "chai";
 
-// https://github.com/chaijs/chai/issues/469
 chai.config.truncateThreshold = 0;
 
 const expect = chai.expect;
@@ -69,8 +68,6 @@ describe("calculate", function() {
     total: "18",
   });
 
-  // When '=' is pressed and there is not enough information to complete
-  // an operation, the '=' should be disregarded.
   test(["3", "+", "=", "3", "="], {
     total: "6",
   });
